@@ -73,6 +73,18 @@ flowchart LR
 - [ ] 若有动作，已写清谁能执行、失败时如何处理
 - [ ] 有一个可量化的试用指标或质量护栏
 
+## 参考答案图解
+
+对照时确认：AI 或行业方案只能在受控对象和权限范围内运行；高风险环节必须保留人工确认。
+
+```mermaid
+flowchart LR
+  O["已授权对象（Authorized Objects）"] --> I["识别/建议（AI Insight）"]
+  I --> H["人工审批（Human Approval）"]
+  H --> A["受限动作（Action）"]
+  A --> M["结果衡量（Measured Outcome）"]
+```
+
 ## 常见误区
 
 把风险隐藏到合同后。提前说清依赖，反而更能建立可执行的信任。
