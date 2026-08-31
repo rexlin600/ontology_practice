@@ -3,6 +3,21 @@
 > **学习时长：约 20–30 分钟**  
 > **今天的成果：** 理解 Ontology 的价值：把分散系统里的记录，变成可共同操作的业务对象。
 
+## 本课术语速览（中英对照）
+
+| 术语 | 中文注释 | 这一课如何理解 |
+| --- | --- | --- |
+| Ontology（本体论 / 业务语义层） | 将现实业务组织成对象、关系、动作与权限的模型 | 用它连接数据与一线决策，而不是只做报表。 |
+| Object（对象） | 可被识别、查询和讨论的业务实体 | 例如 Patient（患者）、Encounter（一次就诊）。 |
+| Property（属性） | 描述对象的字段或特征 | 例如采样时间、风险等级、库存数量。 |
+| Link（关系链接） | 对象间可解释、可追溯的关联 | 例如患者拥有一次就诊、一次就诊产生检查。 |
+| Action（业务动作） | 受角色、审批和审计约束的操作 | 例如创建待办、通知负责人、生成草案。 |
+| Patient（患者） | 医疗案例中的服务主体 | 不是一行数据，而是多次就诊和事实的中心。 |
+| Encounter（一次就诊 / 就诊事件） | 某一次具体就诊的业务上下文 | 同一 Patient（患者）可以拥有多次 Encounter（一次就诊）。 |
+| Risk Assessment（风险评估） | 基于证据和规则形成的判断 | 必须保留来源、时间、规则版本与不确定性。 |
+
+> 读法约定：所有英文术语都以中文含义为先；英文用于与你在产品文档、界面和 FDE 职位描述中见到的表达对齐。完整表见 [GLOSSARY.md](../GLOSSARY.md)。
+
 ## 先用一句话抓住重点
 
 对象不是表名，而是业务中可被识别、查询、讨论、授权和执行动作的实体。把它想成病历中的“患者”，而不是数据库中的一行 patient 表。
@@ -15,10 +30,10 @@
 
 ```mermaid
 flowchart LR
-  Patient["Patient"] --> Encounter["Encounter"]
-  Encounter["Encounter"] --> Test["Test"]
-  Test["Test"] --> RiskAssessment["RiskAssessment"]
-  RiskAssessment["RiskAssessment"] --> CareAction["CareAction"]
+  Patient["患者（Patient）"] --> Encounter["一次就诊（Encounter）"]
+  Encounter["一次就诊（Encounter）"] --> Test["检查/检验（Test）"]
+  Test["检查/检验（Test）"] --> RiskAssessment["风险评估（Risk Assessment）"]
+  RiskAssessment["风险评估（Risk Assessment）"] --> CareAction["协同处置（Care Action）"]
 
 ```
 
