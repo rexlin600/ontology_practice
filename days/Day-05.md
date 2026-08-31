@@ -72,6 +72,18 @@ Patient—has→Encounter；Encounter—owned by→Clinician；Encounter—may r
 - [ ] 若有动作，已写清谁能执行、失败时如何处理
 - [ ] 有一个可量化的试用指标或质量护栏
 
+## 参考答案图解
+
+对照时确认：你不仅写出了字段，更写出了**谁在何时基于哪些证据执行什么受控动作**。
+
+```mermaid
+flowchart LR
+  D["业务决策（Decision）"] --> O["业务对象（Object）"]
+  O --> E["关系与证据（Link / Evidence）"]
+  E --> A["受控动作（Action）"]
+  A --> L["审计记录（Audit Log）"]
+```
+
 ## 常见误区
 
 把所有关系建成双向、永久、无条件的链接。真实世界会取消、转院、换班，关系需要状态与时间。
