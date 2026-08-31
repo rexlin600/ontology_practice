@@ -1,14 +1,17 @@
-# 来源与口径
+# 资料与口径
 
-- [Foundry Ontology 核心概念](https://www.palantir.com/docs/foundry/ontology/core-concepts)
-- [Object Layer 入门](https://www.palantir.com/docs/foundry/getting-started/introductory-concepts)
-- [Link types](https://www.palantir.com/docs/foundry/object-link-types/link-types-overview)
-- [Actions 与对象编辑](https://www.palantir.com/docs/foundry/object-edits/overview)
-- [Functions](https://www.palantir.com/docs/foundry/functions/overview)
-- [Object Views](https://www.palantir.com/docs/foundry/object-views/overview)
-- [Workshop](https://www.palantir.com/docs/foundry/workshop/overview)
-- [权限](https://www.palantir.com/docs/foundry/object-permissioning/overview)
-- [AIP](https://www.palantir.com/docs/foundry/aip)
-- [东京 FDSE 公开职位（检索：2026-08-31）](https://jobs.lever.co/palantir/12e94938-55cb-4ad9-9c05-405ebc9ef430)
+这些资料用于核对术语与扩展学习；日课正文已包含完成练习所需的核心解释，不依赖外链。
 
-招聘网站职位会变化或要求登录。投递前应以目标公司当天的岗位页面为准，不将搜索摘要当成长期事实。
+## Palantir 官方资料
+
+- [Ontology 核心概念](https://www.palantir.com/docs/foundry/ontology/core-concepts/)
+- [Object Types](https://www.palantir.com/docs/foundry/object-link-types/)
+- [Actions](https://www.palantir.com/docs/foundry/action-types/)
+- [Ontology 编辑与数据映射](https://www.palantir.com/docs/foundry/ontology-manager/)
+- [AIP 与 Ontology](https://www.palantir.com/docs/foundry/aip/)
+
+## 课程口径
+
+- “FDE”指连接客户现场、数据/系统实现与业务结果的交付角色；不同公司的岗位名称与工具栈不同。
+- 医疗、制造、供应链和金融中的案例以教学建模为目的；除明确引用的官方概念外，不宣称为任何企业的真实内部方案。
+- 设计高风险 Action 时，默认加入最小权限、人工确认、审计、版本与回退机制。
