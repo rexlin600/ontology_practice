@@ -73,6 +73,18 @@ Patient、Encounter、Test、RiskAssessment、CareAction；分别可来自 HIS�
 - [ ] 若有动作，已写清谁能执行、失败时如何处理
 - [ ] 有一个可量化的试用指标或质量护栏
 
+## 参考答案图解
+
+对照时确认：你不仅写出了字段，更写出了**谁在何时基于哪些证据执行什么受控动作**。
+
+```mermaid
+flowchart LR
+  D["业务决策（Decision）"] --> O["业务对象（Object）"]
+  O --> E["关系与证据（Link / Evidence）"]
+  E --> A["受控动作（Action）"]
+  A --> L["审计记录（Audit Log）"]
+```
+
 ## 常见误区
 
 把 Ontology 当作数据仓库的别名。数据仓库回答“发生了什么”，本体论还要回答“现在能做什么、谁可以做”。
