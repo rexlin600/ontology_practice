@@ -72,6 +72,18 @@ result_value→value（数值解析）；unit_code→unit（标准化为 ng/L）
 - [ ] 若有动作，已写清谁能执行、失败时如何处理
 - [ ] 有一个可量化的试用指标或质量护栏
 
+## 参考答案图解
+
+对照时确认：从源记录到结论的每一步都能解释；数据缺失或异常时不能被悄悄吞掉。
+
+```mermaid
+flowchart LR
+  S["源记录（Source Record）"] --> T["转换映射（Transform）"]
+  T --> Q["质量检查（Quality Check）"]
+  Q --> R["规则/指标（Rule / Metric）"]
+  R --> E["可解释结论（Evidence）"]
+```
+
 ## 常见误区
 
 只记录字段名对应。真正容易出错的是单位、时区、空值、重复记录和迟到数据。
